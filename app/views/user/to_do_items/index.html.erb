@@ -1,0 +1,36 @@
+<div class="container">
+  <h4><%= link_to "<button>Create New ToDo</button>".html_safe,new_user_to_do_item_path%></h4>
+  <p>To Do List</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Due Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody class="sortable">
+      <% @items.each_with_sortable_id do |item, sortable_id| %>
+      <tr id="<%= sortable_id %>">  <!-- Needs id tag on sorting elements -->
+        <td><%= item.try(:name) %></td>
+        <td><%= item.try(:category).try(:name)%></td>
+        <td><%= item.try(:due_date)%></td>
+        <td>
+        	<span id="com_<%=item.id%>">
+        		<%=render "status", item: item%>
+        	</span>
+        </td>
+        
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+
+<script type="text/javascript">
+  $(function() {
+  $('.sortable').railsSortable();
+});
+</script>

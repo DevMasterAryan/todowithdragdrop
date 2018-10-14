@@ -1,0 +1,7 @@
+<%if item.is_completed?%>
+<%=link_to '<button>Completed</button>'.html_safe, completed_user_to_do_item_path(item),method: :post,remote: true%>
+<%else%>
+<%=link_to '<button>UnCompleted</button>'.html_safe, completed_user_to_do_item_path(item),method: :post,remote: true%>
+<%end%>
+
+        		
