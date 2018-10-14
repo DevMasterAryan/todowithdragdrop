@@ -20,6 +20,7 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-sass'
 gem 'pry'
+gem 'rails-erd', group: :development
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
