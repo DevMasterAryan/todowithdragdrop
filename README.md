@@ -23,4 +23,7 @@ Heroku link
 https://todowithdraganddrop.herokuapp.com/users/sign_up
 
 
+ERD diagram link
+
+https://todowithdraganddrop.herokuapp.com/erd.pdf
 
